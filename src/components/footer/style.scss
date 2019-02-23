@@ -1,0 +1,24 @@
+@import '../styles/color.scss';
+
+.app-footer{
+    direction: rtl;
+    background: $main-color;
+    display: flex;
+    text-align: center;
+    div{
+        flex: 1;
+    }
+    .social-links{
+        ul {
+            list-style-type: none;
+            li{
+                a{
+                    .ig-logo{
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
