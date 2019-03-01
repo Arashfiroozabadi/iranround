@@ -4,7 +4,7 @@ import './style.scss';
 
 function Main() {
   return (
-    <main>
+    <main className="app-main">
       اینجا محل محتوا است
     </main>
   )

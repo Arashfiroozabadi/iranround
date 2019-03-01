@@ -5,11 +5,16 @@
 .app-header{
     background: $main-color;
     .app-title{
-        padding: 2vw;
+        padding: 1.5vw;
         >h1{
             margin: 0;
             color: $app-title-color;
             font-family: $app-title-font;
+            font-size: 3em;
+            @media only screen and (max-width: 768px) {
+                font-size: 7em; 
+            }
         }
+        
     }
 }

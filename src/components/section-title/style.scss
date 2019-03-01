@@ -1,0 +1,18 @@
+.section-title{
+    font-weight: 400;
+    margin: 0 0 1em 0;
+    position: relative;
+    &:after {
+        content: ' ';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 2.5px;
+        height: 0.2em;
+        width: 25em;
+        background: linear-gradient(90deg, rgba(240, 236, 236,0)50%,rgb(245, 248, 248) );
+    }
+    @media only screen and (max-width: 768px) {
+        font-size: 5em; 
+    }
+}
