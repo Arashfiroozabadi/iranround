@@ -3,16 +3,47 @@
 
 
 .app-header{
-    background: $main-color;
     .app-title{
         padding: 1.5vw;
-        >h1{
+        perspective: 80cm;
+        >.app-logo{
             margin: 0;
             color: $app-title-color;
             font-family: $app-title-font;
-            font-size: 3em;
+            font-size: 6em;
+            color: white;
+            letter-spacing: 5px;
+            text-shadow:
+                1px 1px 1px #fdfdfd,
+                2px 1px 1px #ececec,
+                3px 1px 1px #e2e2e2,
+                4px 1px 1px #dfdddd,
+                5px 1px 1px #dddada,
+                6px 1px 1px #d3cfcf,
+                7px 1px 1px #dbd9d9,
+                1px 1px 1px #d8d2d2,
+                9px 1px 1px #dad5d5,
+                10px 1px 1px #c7c7c7,
+                18px 18px 6px rgba(16,16,16,0.4),
+                19px 22px 10px rgba(16,16,16,0.2)
+            ;
             @media only screen and (max-width: 768px) {
-                font-size: 7em; 
+                font-size: 14em;
+                letter-spacing: 10px;
+                text-shadow:
+                    1px 1px 1px #fdfdfd,
+                    2px 1px 1px #ececec,
+                    3px 1px 1px #e2e2e2,
+                    4px 1px 1px #dfdddd,
+                    5px 1px 1px #dddada,
+                    6px 1px 1px #d3cfcf,
+                    7px 1px 1px #dbd9d9,
+                    1px 1px 1px #d8d2d2,
+                    9px 1px 1px #dad5d5,
+                    10px 1px 1px #c7c7c7,
+                    18px 15px 6px rgba(16,16,16,0.4),
+                    19px 18px 10px rgba(16,16,16,0.2)
+                ;
             }
         }
         

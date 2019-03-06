@@ -3,13 +3,12 @@
 
 .app-footer{
     direction: rtl;
-    background: $main-color;
     display: flex;
     padding: 2em;
     @media only screen and (max-width: 768px) {
         flex-direction: column;
     }
-    div{
+    .row{
         flex: 1;
     }
     .social-links-continer{

@@ -3,15 +3,19 @@ import React from 'react';
 import './style.scss'
 
 function Header(params) {
-    
-    return(
-        <header 
+
+    return (
+        <header
             className="app-header"
         >
-            <div 
+            <div
                 className="app-title"
             >
-                <h1>iranRound</h1>
+                <h1
+                    className="app-logo"
+                >
+                    IranRound
+                </h1>
             </div>
         </header>
     )

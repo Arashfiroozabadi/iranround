@@ -1,0 +1,13 @@
+@import '../styles/box-model.scss';
+
+.container-caption{
+    color: white;
+    border-radius: 2.5px;
+    >p{
+        @media only screen and (max-width: 768px) {
+            font-size: 3em;
+        }
+        font-weight: 200;
+        margin: 7.5px;
+    }
+}

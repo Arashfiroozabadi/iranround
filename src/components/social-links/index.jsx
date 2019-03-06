@@ -15,7 +15,7 @@ function SocialLinks({
             target="_blank"
             rel="noopener noreferrer"
         >
-            <img src={src} alt={alt} title={title} />
+            <img role='link' src={src} alt={alt} title={title} />
         </a>
     )
 }
