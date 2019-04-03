@@ -1,1 +1,27 @@
 @import '../styles/color.scss';
+
+
+.search-block{
+    direction: rtl;
+    color: white;
+    .search-form{
+        position: relative;
+        width: 50%;
+        border: 1px solid white;
+        border-radius: 2.5px;
+        padding: 1em;
+
+        .search-label{
+            position: absolute;
+            top: -0.9em;
+            padding: 0 10px;
+            background: rebeccapurple;
+        }
+
+        .search-input{
+            border-style: none;     
+            border-radius: 2.5px;
+            width: 100%;
+        }
+    }
+}
