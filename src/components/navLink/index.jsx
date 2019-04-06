@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import anime from 'animejs';
+
 import './style.scss';
 
 function handlePush(e,props) {
