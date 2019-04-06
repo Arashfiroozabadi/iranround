@@ -1,28 +1,59 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import anime from 'animejs';
+import './style.scss';
 
 function handlePush(props) {
-    const timeOut = setTimeout(
+    setTimeout(
         () => {
 
-            if (props.location.pathname === `/${props.to}`) {
-                return null
+            if (props.location.pathname === props.to) {
+                return null;
             } else {
-                console.log(props);
-                props.history.push(`${props.location.pathname}${props.to}`)
+                props.history.push(props.to)
             }
         },
         1000,
     )
 }
 
+function activeLink(props){
+    if (props.location.pathname === props.to) {
+        return {
+            backgroundColor:'blueviolet',
+            opacity:1
+        };
+    }
+}
+
 function NavLink(props) {
     return (
-        <div>
+        <div className="nav-link" >
             <button
+                className="nav-link-button"
                 onClick={() => handlePush(props)}
+                style={activeLink(props)}
+                onMouseOver={e => {
+                    anime({
+                      targets: e.currentTarget,
+                      scale: {
+                        value: 1.08,
+                        duration: 200
+                      },
+                    })
+                }}
+                onMouseOut={e => {
+                    anime({
+                      targets: e.currentTarget,
+                      scale: {
+                        value: 1,
+                        delay: 200,
+                        duration: 300
+                      }
+                    })
+                }}
             >
-                {props.to}
+                {props.children}
             </button>
         </div>
     )
