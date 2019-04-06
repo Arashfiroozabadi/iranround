@@ -47,7 +47,6 @@ function NavLink(props) {
                       targets: e.currentTarget,
                       scale: {
                         value: 1,
-                        delay: 200,
                         duration: 300
                       }
                     })
