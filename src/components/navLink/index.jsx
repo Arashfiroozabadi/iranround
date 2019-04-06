@@ -3,7 +3,15 @@ import { withRouter } from 'react-router-dom';
 import anime from 'animejs';
 import './style.scss';
 
-function handlePush(props) {
+function handlePush(e,props) {
+    console.log(e.currentTarget);
+    anime({
+        targets: e.currentTarget,
+        scale: {
+            value: 2,
+            duration: 200
+        },
+    })
     setTimeout(
         () => {
 
@@ -31,7 +39,7 @@ function NavLink(props) {
         <div className="nav-link" >
             <button
                 className="nav-link-button"
-                onClick={() => handlePush(props)}
+                onClick={(e) => handlePush(e,props)}
                 style={activeLink(props)}
                 onMouseOver={e => {
                     anime({
