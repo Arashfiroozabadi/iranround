@@ -4,14 +4,19 @@ import anime from 'animejs';
 import './style.scss';
 
 function handlePush(e,props) {
-    console.log(e.currentTarget);
-    anime({
-        targets: e.currentTarget,
-        scale: {
-            value: 2,
-            duration: 200
-        },
-    })
+    if (props.location.pathname === props.to) {
+        return null;
+    } else {
+        anime({
+            targets: e.currentTarget,
+            translateX: [
+                { value: -2, duration: 20 },
+                { value: 2, duration: 20, delay: 30 },
+                { value: 0, duration: 20, delay: 30 }
+            ],
+        });
+    }
+    
     setTimeout(
         () => {
 
