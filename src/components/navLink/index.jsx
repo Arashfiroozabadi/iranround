@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux'
 import anime from 'animejs';
 
 import './style.scss';
@@ -8,6 +9,7 @@ function handlePush(e,props) {
     if (props.location.pathname === props.to) {
         return null;
     } else {
+        props.startAnime();
         anime({
             targets: e.currentTarget,
             translateX: [
@@ -20,11 +22,11 @@ function handlePush(e,props) {
     
     setTimeout(
         () => {
-
             if (props.location.pathname === props.to) {
                 return null;
             } else {
-                props.history.push(props.to)
+                window.scrollTo(0,0);
+                props.history.push(props.to);
             }
         },
         1000,
@@ -72,5 +74,22 @@ function NavLink(props) {
     )
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {
+      
+    }
+  }
+  
+  const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+     startAnime: () => dispatch({ type : "PLAY_ANIME"})
+    }
+  }
 
-export default withRouter(NavLink);
+export default withRouter(
+    connect(
+        mapStateToProps,
+        mapDispatchToProps
+    )
+    (NavLink)
+);
